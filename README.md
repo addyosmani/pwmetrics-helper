@@ -1,9 +1,8 @@
-## Helpers for getting values of specific Progressive Web Metrics
+## Helpers for getting values of specific Progressive Web App metrics
 
 The [pwmetrics](https://github.com/paulirish/pwmetrics) module exposes the ability to get use performance 
-metrics out of Lighthouse. This includes the ability to perform multiple runs.
-
-This module provides a simple API on top of pwmetrics for plucking out values of specific metrics.
+metrics out of Lighthouse. This includes the ability to perform multiple runs. This module provides a simple 
+API on top of pwmetrics for plucking out values of **specific** metrics.
 
 ## Install
 
@@ -44,6 +43,7 @@ getMetrics('https://airhorner.com', {
 const getMetrics = require('pwmetrics-helper');
 
 getMetrics('https://airhorner.com', {
+    runs: 2,
     desiredMetric: 'First Contentful Paint'
 }).then(score => {
     // do something with the FCP
@@ -63,7 +63,7 @@ getMetrics('https://airhorner.com').then(data => {
 ## runs
 
 `runs` specifies the number of runs of Lighthouse to perform via `pwmetrics`
-before a median score is returned
+before a median score is returned. This module generally defaults to 3 runs.
 
 ## License
 
