@@ -29,7 +29,7 @@ that value from the median runs:
 #### Perform 3 runs (the default) and just return time-to-interactive:
 
 ```js
-const getMetrics = require('pwmetrics-helper);
+const getMetrics = require('pwmetrics-helper');
 
 getMetrics('https://airhorner.com', {
     desiredMetric: 'Time to Interactive'
@@ -41,7 +41,7 @@ getMetrics('https://airhorner.com', {
 #### Perform 2 runs and just return first-contentful-paint
 
 ```js
-const getMetrics = require('pwmetrics-helper);
+const getMetrics = require('pwmetrics-helper');
 
 getMetrics('https://airhorner.com', {
     desiredMetric: 'First Contentful Paint'
@@ -53,7 +53,7 @@ getMetrics('https://airhorner.com', {
 #### Perform 3 runs and return the entire JSON payload from pwmetrics
 
 ```js
-const getMetrics = require('pwmetrics-helper);
+const getMetrics = require('pwmetrics-helper');
 
 getMetrics('https://airhorner.com').then(data => {
     // do something with the data
